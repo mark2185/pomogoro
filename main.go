@@ -31,7 +31,7 @@ func initTimer() {
 				msg = "Break over!"
 			}
 
-			if err := exec.Command("canberra-gtk-play", "-i", "message").Run(); err != nil {
+			if err := exec.Command("canberra-gtk-play", "-i", "alarm-clock-elapsed").Run(); err != nil {
 				panic(err.Error())
 			}
 			if err := exec.Command("dunstify", "-u", "normal", msg).Run(); err != nil {
